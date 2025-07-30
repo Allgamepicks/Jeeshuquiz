@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Zone</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="index.html" class="back-link">Back to Home</a>
+    <h2>English Zone</h2>
+    <section>
+        <h3>Daily Sentences</h3>
+        <ul>
+            <li>How are you?</li>
+            <li>Can I play?</li>
+            <li>What is your name?</li>
+            <li>I like to read.</li>
+            <li>Can I play outside?</li>
+            <li>My name is Ravi.</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Sight Words</h3>
+        <p id="sight-words"></p>
+        <button class="btn" onclick="nextSight()">Next Word</button>
+    </section>
+    <section id="match-section">
+        <h3>Word-Picture Match</h3>
+        <button class="btn" onclick="startMatch()">Start Game</button>
+        <div id="match-game"></div>
+    </section>
+    <section>
+        <h3>Fill in the Blank</h3>
+        <div id="fill-container"></div>
+        <button class="btn" onclick="startFill()">Start</button>
+    </section>
+    <section>
+        <h3>Listen and Repeat</h3>
+        <p>Click play and repeat the sentence.</p>
+        <audio controls src="https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav"></audio>
+    </section>
+    <script src="js/english.js"></script>
+</body>
+</html>

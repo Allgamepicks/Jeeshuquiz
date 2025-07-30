@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Zone</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="index.html" class="back-link">Back to Home</a>
+    <h2>Math Zone</h2>
+    <section>
+        <button onclick="startActivity('add')" class="btn">Addition & Subtraction</button>
+        <button onclick="startActivity('mul')" class="btn">Simple Multiplication</button>
+        <button onclick="startActivity('place')" class="btn">Place Value</button>
+        <button onclick="startActivity('clock')" class="btn">Read the Clock</button>
+        <button onclick="startActivity('word')" class="btn">Word Problems</button>
+        <button onclick="startActivity('shape')" class="btn">Shapes</button>
+        <button onclick="startActivity('pattern')" class="btn">Patterns</button>
+    </section>
+    <section id="activity" class="hidden"></section>
+    <script src="js/math.js"></script>
+</body>
+</html>
