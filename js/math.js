@@ -2,6 +2,7 @@ const activitySection = document.getElementById('activity');
 let current = 0;
 let score = 0;
 let questions = [];
+let wrong = [];
 
 function startActivity(type) {
     current = 0;
@@ -10,11 +11,14 @@ function startActivity(type) {
     activitySection.classList.remove('hidden');
     activitySection.innerHTML = '';
     if (type === 'add') {
-        for (let i = 0; i < 5; i++) {
-            const a = Math.floor(Math.random()*90)+10;
-            const b = Math.floor(Math.random()*90)+10;
-            questions.push({q:`${a} + ${b} = ?`, a: a+b});
-            questions.push({q:`${a} - ${b} = ?`, a:a-b});
+        for (let i = 0; i < 10; i++) {
+            const a = Math.floor(Math.random()*900)+100;
+            const b = Math.floor(Math.random()*900)+100;
+            if (Math.random() > 0.5) {
+                questions.push({q:`${a} + ${b} = ?`, a: a+b});
+            } else {
+                questions.push({q:`${a} - ${b} = ?`, a:a-b});
+            }
         }
     } else if (type === 'mul') {
         for (let i=0; i<5; i++) {
@@ -33,13 +37,23 @@ function startActivity(type) {
             const m = [0,15,30,45][Math.floor(Math.random()*4)];
             questions.push({q:`What time is shown: ${h}:${m.toString().padStart(2,'0')}?`, a:`${h}:${m.toString().padStart(2,'0')}`});
         }
+    } else if (type === 'word') {
+        for (let i=0; i<5; i++) {
+            const n = Math.floor(Math.random()*5)+1;
+            const m = Math.floor(Math.random()*5)+1;
+            questions.push({q:`If you have ${n} apples and get ${m} more, how many apples do you have?`, a:n+m});
+        }
     }
     showQuestion();
 }
 
 function showQuestion() {
     if (current >= questions.length) {
-        activitySection.innerHTML = `<p>You scored ${score}/${questions.length}</p>`;
+        let res = `<p>You scored ${score}/${questions.length}</p>`;
+        if (wrong.length) {
+            res += '<ul>' + wrong.map(w => `<li>${w.q} Answer: ${w.correct}</li>`).join('') + '</ul>';
+        }
+        activitySection.innerHTML = res;
         return;
     }
     const q = questions[current];
@@ -53,7 +67,11 @@ function showQuestion() {
 
 function checkAnswer() {
     const user = document.getElementById('answer').value.trim();
-    if (user == questions[current].a) score++;
+    if (user == questions[current].a) {
+        score++;
+    } else {
+        wrong.push({q: questions[current].q, correct: questions[current].a});
+    }
     current++;
     showQuestion();
 }

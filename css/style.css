@@ -47,3 +47,9 @@ section {
 .hidden {
     display: none;
 }
+
+.hword {
+    cursor: pointer;
+    color: #e91e63;
+    font-weight: bold;
+}

@@ -13,3 +13,47 @@ letters.forEach(l => {
     `;
     container.appendChild(div);
 });
+
+const vocab = [
+    {word:'किताब', meaning:'book', audio:'https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav'},
+    {word:'सेब', meaning:'apple', audio:'https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav'},
+    {word:'घर', meaning:'house', audio:'https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav'}
+];
+const vocabDiv = document.getElementById('vocab');
+vocab.forEach(v => {
+    const d = document.createElement('div');
+    d.innerHTML = `
+        <span class="hword" onclick="this.querySelector('audio').play()">${v.word}</span> - ${v.meaning}
+        <audio src="${v.audio}"></audio>
+    `;
+    vocabDiv.appendChild(d);
+});
+
+let vocabIndex = 0;
+let vocabScore = 0;
+function startVocabQuiz() {
+    vocabIndex = 0;
+    vocabScore = 0;
+    document.getElementById('vocab-quiz').innerHTML = '';
+    showVocabQuestion();
+}
+
+function showVocabQuestion() {
+    if (vocabIndex >= vocab.length) {
+        document.getElementById('vocab-quiz').innerHTML = `Score ${vocabScore}/${vocab.length}`;
+        return;
+    }
+    const v = vocab[vocabIndex];
+    document.getElementById('vocab-quiz').innerHTML = `
+        <p>What is the meaning of <strong>${v.word}</strong>?</p>
+        <input id="vocab-answer" type="text" />
+        <button class="btn" onclick="checkVocab('${v.meaning}')">Submit</button>
+    `;
+}
+
+function checkVocab(ans) {
+    const val = document.getElementById('vocab-answer').value.trim().toLowerCase();
+    if (val === ans.toLowerCase()) vocabScore++;
+    vocabIndex++;
+    showVocabQuestion();
+}
