@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map { height: 400px; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">Back to Home</a>
+    <h2>Explore the World</h2>
+    <div id="map"></div>
+    <section id="country-info"></section>
+    <button id="start-quiz" class="btn">Start Quiz</button>
+    <section id="quiz-section" class="hidden">
+        <div id="quiz-question"></div>
+        <div id="quiz-options"></div>
+        <div id="quiz-progress"></div>
+    </section>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/explore.js"></script>
+</body>
+</html>
