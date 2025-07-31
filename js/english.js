@@ -3,6 +3,15 @@ const words = [
     {word:'book', img:'https://via.placeholder.com/100?text=book'},
     {word:'cat', img:'https://via.placeholder.com/100?text=cat'}
 ];
+const sightWords = ['what','where','because','here','there'];
+let sightIndex = 0;
+const fillData = [
+    {sent:'I have __ apples.', answer:'two'},
+    {sent:'We go to __ school.', answer:'the'},
+    {sent:'__ are you?', answer:'How'}
+];
+let fillIndex = 0;
+
 let matchIndex = 0;
 let correct = 0;
 function startMatch() {
@@ -29,3 +38,34 @@ function checkWord(answer) {
     matchIndex++;
     showMatch();
 }
+
+function nextSight() {
+    const p = document.getElementById('sight-words');
+    p.textContent = sightWords[sightIndex];
+    sightIndex = (sightIndex + 1) % sightWords.length;
+}
+
+function startFill() {
+    fillIndex = 0;
+    showFill();
+}
+
+function showFill() {
+    if (fillIndex >= fillData.length) {
+        document.getElementById('fill-container').innerHTML = '<p>Great job!</p>';
+        return;
+    }
+    const f = fillData[fillIndex];
+    document.getElementById('fill-container').innerHTML = `
+        <p>${f.sent}</p>
+        <input id="fill-input" type="text" />
+        <button class="btn" onclick="checkFill('${f.answer}')">Submit</button>
+    `;
+}
+
+function checkFill(ans) {
+    const val = document.getElementById('fill-input').value.trim();
+    fillIndex++;
+    showFill();
+}
+=======

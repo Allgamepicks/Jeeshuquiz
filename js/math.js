@@ -2,11 +2,29 @@ const activitySection = document.getElementById('activity');
 let current = 0;
 let score = 0;
 let questions = [];
+let wrong = [];
+=======
 
 function startActivity(type) {
     current = 0;
     score = 0;
     questions = [];
+
+    wrong = [];
+    activitySection.classList.remove('hidden');
+    activitySection.innerHTML = '';
+    if (type === 'add') {
+        for (let i = 0; i < 10; i++) {
+            const a = Math.floor(Math.random()*90)+10;
+            const b = Math.floor(Math.random()*90)+10;
+            if (Math.random() > 0.5) {
+                questions.push({q:`${a} + ${b} = ?`, a: a+b});
+            } else {
+                const c = Math.max(a,b);
+                const d = Math.min(a,b);
+                questions.push({q:`${c} - ${d} = ?`, a:c-d});
+            }
+=======
     activitySection.classList.remove('hidden');
     activitySection.innerHTML = '';
     if (type === 'add') {
@@ -15,6 +33,7 @@ function startActivity(type) {
             const b = Math.floor(Math.random()*90)+10;
             questions.push({q:`${a} + ${b} = ?`, a: a+b});
             questions.push({q:`${a} - ${b} = ?`, a:a-b});
+
         }
     } else if (type === 'mul') {
         for (let i=0; i<5; i++) {
@@ -33,13 +52,44 @@ function startActivity(type) {
             const m = [0,15,30,45][Math.floor(Math.random()*4)];
             questions.push({q:`What time is shown: ${h}:${m.toString().padStart(2,'0')}?`, a:`${h}:${m.toString().padStart(2,'0')}`});
         }
+
+    } else if (type === 'word') {
+        for (let i=0; i<5; i++) {
+            const n = Math.floor(Math.random()*5)+1;
+            const m = Math.floor(Math.random()*5)+1;
+            questions.push({q:`If you have ${n} apples and get ${m} more, how many apples do you have?`, a:n+m});
+        }
+    } else if (type === 'shape') {
+        const shapeQs = [
+            {q:'Which shape has 3 sides?', a:'triangle'},
+            {q:'Which shape has no corners?', a:'circle'},
+            {q:'Which shape has 4 equal sides?', a:'square'}
+        ];
+        questions = shapeQs;
+    } else if (type === 'pattern') {
+        const patternQs = [
+            {q:'2, 4, 6, __ ?', a:'8'},
+            {q:'circle, square, circle, square, __ ?', a:'circle'},
+            {q:'5, 10, 15, __ ?', a:'20'}
+        ];
+        questions = patternQs;
+=======
+
     }
     showQuestion();
 }
 
 function showQuestion() {
     if (current >= questions.length) {
+
+        let res = `<p>You scored ${score}/${questions.length}</p>`;
+        if (wrong.length) {
+            res += '<ul>' + wrong.map(w => `<li>${w.q} Answer: ${w.correct}</li>`).join('') + '</ul>';
+        }
+        activitySection.innerHTML = res;
+=======
         activitySection.innerHTML = `<p>You scored ${score}/${questions.length}</p>`;
+
         return;
     }
     const q = questions[current];
@@ -53,7 +103,15 @@ function showQuestion() {
 
 function checkAnswer() {
     const user = document.getElementById('answer').value.trim();
+
+    if (user == questions[current].a) {
+        score++;
+    } else {
+        wrong.push({q: questions[current].q, correct: questions[current].a});
+    }
+=======
     if (user == questions[current].a) score++;
+
     current++;
     showQuestion();
 }
