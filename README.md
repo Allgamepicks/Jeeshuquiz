@@ -1,6 +1,5 @@
-# Jeeshuquiz
-
 Simple educational web app for kids with sections for world exploration, math activities, English practice and Hindi learning.
+ 2ndxip-codex/create-mobile-friendly-homepage-layout
 
 ## Features
 - Interactive world map with quizzes on flags, capitals and continents

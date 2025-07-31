@@ -11,6 +11,7 @@ const fillData = [
     {sent:'__ are you?', answer:'How'}
 ];
 let fillIndex = 0;
+
 let matchIndex = 0;
 let correct = 0;
 function startMatch() {
@@ -67,3 +68,4 @@ function checkFill(ans) {
     fillIndex++;
     showFill();
 }
+=======
