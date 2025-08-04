@@ -3,24 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore the World</title>
+    <title>Explore the World - Kid's Learning Hub</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <style>
-        #map { height: 400px; }
+        #map { 
+            height: 450px; 
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        .leaflet-popup-content {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive;
+        }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-link">Back to Home</a>
-    <h2>Explore the World</h2>
-    <div id="map"></div>
-    <section id="country-info"></section>
-    <button id="start-quiz" class="btn">Start Quiz</button>
+    <a href="index.html" class="back-link">🏠 Back to Home</a>
+    
+    <header>
+        <h1>🌍 Explore the World</h1>
+    </header>
+
+    <section>
+        <h3>🗺️ Interactive World Map</h3>
+        <p style="text-align: center; margin-bottom: 20px;">
+            Click on any country marker to learn amazing facts!
+        </p>
+        <div id="map"></div>
+    </section>
+
+    <section id="country-info">
+        <div style="text-align: center; padding: 40px; color: #666;">
+            <h3>🎯 Click on a country marker above to start exploring!</h3>
+            <p>Discover flags, capitals, languages, and fun facts about countries around the world!</p>
+        </div>
+    </section>
+
+    <section style="text-align: center;">
+        <button id="start-quiz" class="btn" style="font-size: 1.3em; padding: 20px 40px;">
+            🧠 Take Geography Quiz
+        </button>
+    </section>
+
     <section id="quiz-section" class="hidden">
         <div id="quiz-question"></div>
         <div id="quiz-options"></div>
         <div id="quiz-progress"></div>
     </section>
+
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="js/explore.js"></script>
 </body>

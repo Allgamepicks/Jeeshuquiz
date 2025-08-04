@@ -3,23 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Zone</title>
+    <title>Math Zone - Kid's Learning Hub</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <a href="index.html" class="back-link">Back to Home</a>
-    <h2>Math Zone</h2>
+    <a href="index.html" class="back-link">🏠 Back to Home</a>
+    
+    <header>
+        <h1>🧮 Math Zone</h1>
+    </header>
+
     <section>
-        <button onclick="startActivity('add')" class="btn">Addition & Subtraction</button>
-        <button onclick="startActivity('mul')" class="btn">Simple Multiplication</button>
-        <button onclick="startActivity('place')" class="btn">Place Value</button>
-        <button onclick="startActivity('clock')" class="btn">Read the Clock</button>
-        <button onclick="startActivity('word')" class="btn">Word Problems</button>
-        <button onclick="startActivity('shape')" class="btn">Shapes</button>
-        <button onclick="startActivity('pattern')" class="btn">Patterns</button>
-=======
+        <h3>🎯 Choose Your Math Adventure!</h3>
+        <div class="activity-grid">
+            <div class="activity-card" onclick="startActivity('add')">
+                <h4>➕➖ Addition & Subtraction</h4>
+                <p>Practice adding and subtracting numbers!</p>
+            </div>
+            <div class="activity-card" onclick="startActivity('mul')">
+                <h4>✖️ Simple Multiplication</h4>
+                <p>Learn your multiplication tables!</p>
+            </div>
+            <div class="activity-card" onclick="startActivity('place')">
+                <h4>🔢 Place Value</h4>
+                <p>Understand hundreds, tens, and ones!</p>
+            </div>
+            <div class="activity-card" onclick="startActivity('word')">
+                <h4>📝 Word Problems</h4>
+                <p>Solve real-world math problems!</p>
+            </div>
+            <div class="activity-card" onclick="startActivity('shape')">
+                <h4>🔺 Shapes</h4>
+                <p>Learn about different shapes!</p>
+            </div>
+            <div class="activity-card" onclick="startActivity('pattern')">
+                <h4>🔄 Patterns</h4>
+                <p>Find the next number in the sequence!</p>
+            </div>
+        </div>
     </section>
-    <section id="activity" class="hidden"></section>
+
+    <section id="activity" class="hidden">
+        <!-- Math activities will be populated here -->
+    </section>
+
     <script src="js/math.js"></script>
 </body>
 </html>
