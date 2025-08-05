@@ -1,47 +1,48 @@
-// Hindi learning data
-const hindiLetters = [
-    { 
-        devanagari: 'अ', 
-        roman: 'a', 
-        word: 'अम्मा', 
-        meaning: 'mother',
-        pronunciation: 'amma'
-    },
-    { 
-        devanagari: 'आ', 
-        roman: 'aa', 
-        word: 'आम', 
-        meaning: 'mango',
-        pronunciation: 'aam'
-    },
-    { 
-        devanagari: 'इ', 
-        roman: 'i', 
-        word: 'इमली', 
-        meaning: 'tamarind',
-        pronunciation: 'imli'
-    },
-    { 
-        devanagari: 'ई', 
-        roman: 'ee', 
-        word: 'ईख', 
-        meaning: 'sugarcane',
-        pronunciation: 'eekh'
-    },
-    { 
-        devanagari: 'उ', 
-        roman: 'u', 
-        word: 'उल्लू', 
-        meaning: 'owl',
-        pronunciation: 'ullu'
-    },
-    { 
-        devanagari: 'ऊ', 
-        roman: 'oo', 
-        word: 'ऊन', 
-        meaning: 'wool',
-        pronunciation: 'oon'
-    }
+// Hindi learning data - Complete Devanagari Alphabet
+const hindiAlphabet = [
+    // Vowels (स्वर)
+    { devanagari: 'अ', roman: 'a', type: 'vowel', word: 'अनार', meaning: 'pomegranate', pronunciation: 'anaar' },
+    { devanagari: 'आ', roman: 'aa', type: 'vowel', word: 'आम', meaning: 'mango', pronunciation: 'aam' },
+    { devanagari: 'इ', roman: 'i', type: 'vowel', word: 'इमली', meaning: 'tamarind', pronunciation: 'imli' },
+    { devanagari: 'ई', roman: 'ee', type: 'vowel', word: 'ईख', meaning: 'sugarcane', pronunciation: 'eekh' },
+    { devanagari: 'उ', roman: 'u', type: 'vowel', word: 'उल्लू', meaning: 'owl', pronunciation: 'ullu' },
+    { devanagari: 'ऊ', roman: 'oo', type: 'vowel', word: 'ऊन', meaning: 'wool', pronunciation: 'oon' },
+    { devanagari: 'ए', roman: 'e', type: 'vowel', word: 'एक', meaning: 'one', pronunciation: 'ek' },
+    { devanagari: 'ऐ', roman: 'ai', type: 'vowel', word: 'ऐनक', meaning: 'glasses', pronunciation: 'ainak' },
+    { devanagari: 'ओ', roman: 'o', type: 'vowel', word: 'ओखली', meaning: 'mortar', pronunciation: 'okhli' },
+    { devanagari: 'औ', roman: 'au', type: 'vowel', word: 'औरत', meaning: 'woman', pronunciation: 'aurat' },
+    
+    // Consonants (व्यंजन)
+    { devanagari: 'क', roman: 'ka', type: 'consonant', word: 'कमल', meaning: 'lotus', pronunciation: 'kamal' },
+    { devanagari: 'ख', roman: 'kha', type: 'consonant', word: 'खरगोश', meaning: 'rabbit', pronunciation: 'khargosh' },
+    { devanagari: 'ग', roman: 'ga', type: 'consonant', word: 'गाय', meaning: 'cow', pronunciation: 'gaay' },
+    { devanagari: 'घ', roman: 'gha', type: 'consonant', word: 'घर', meaning: 'house', pronunciation: 'ghar' },
+    { devanagari: 'च', roman: 'cha', type: 'consonant', word: 'चाँद', meaning: 'moon', pronunciation: 'chaand' },
+    { devanagari: 'छ', roman: 'chha', type: 'consonant', word: 'छत', meaning: 'roof', pronunciation: 'chhat' },
+    { devanagari: 'ज', roman: 'ja', type: 'consonant', word: 'जल', meaning: 'water', pronunciation: 'jal' },
+    { devanagari: 'झ', roman: 'jha', type: 'consonant', word: 'झंडा', meaning: 'flag', pronunciation: 'jhanda' },
+    { devanagari: 'ट', roman: 'ta', type: 'consonant', word: 'टमाटर', meaning: 'tomato', pronunciation: 'tamatar' },
+    { devanagari: 'ठ', roman: 'tha', type: 'consonant', word: 'ठंडा', meaning: 'cold', pronunciation: 'thanda' },
+    { devanagari: 'ड', roman: 'da', type: 'consonant', word: 'डमरू', meaning: 'drum', pronunciation: 'damru' },
+    { devanagari: 'ढ', roman: 'dha', type: 'consonant', word: 'ढोल', meaning: 'drum', pronunciation: 'dhol' },
+    { devanagari: 'त', roman: 'ta', type: 'consonant', word: 'तारा', meaning: 'star', pronunciation: 'tara' },
+    { devanagari: 'थ', roman: 'tha', type: 'consonant', word: 'थैला', meaning: 'bag', pronunciation: 'thaila' },
+    { devanagari: 'द', roman: 'da', type: 'consonant', word: 'दवा', meaning: 'medicine', pronunciation: 'dawa' },
+    { devanagari: 'ध', roman: 'dha', type: 'consonant', word: 'धन', meaning: 'wealth', pronunciation: 'dhan' },
+    { devanagari: 'न', roman: 'na', type: 'consonant', word: 'नाक', meaning: 'nose', pronunciation: 'naak' },
+    { devanagari: 'प', roman: 'pa', type: 'consonant', word: 'पानी', meaning: 'water', pronunciation: 'paani' },
+    { devanagari: 'फ', roman: 'pha', type: 'consonant', word: 'फल', meaning: 'fruit', pronunciation: 'phal' },
+    { devanagari: 'ब', roman: 'ba', type: 'consonant', word: 'बच्चा', meaning: 'child', pronunciation: 'bachcha' },
+    { devanagari: 'भ', roman: 'bha', type: 'consonant', word: 'भालू', meaning: 'bear', pronunciation: 'bhalu' },
+    { devanagari: 'म', roman: 'ma', type: 'consonant', word: 'माता', meaning: 'mother', pronunciation: 'mata' },
+    { devanagari: 'य', roman: 'ya', type: 'consonant', word: 'यज्ञ', meaning: 'sacrifice', pronunciation: 'yagya' },
+    { devanagari: 'र', roman: 'ra', type: 'consonant', word: 'राजा', meaning: 'king', pronunciation: 'raja' },
+    { devanagari: 'ल', roman: 'la', type: 'consonant', word: 'लड़का', meaning: 'boy', pronunciation: 'ladka' },
+    { devanagari: 'व', roman: 'va', type: 'consonant', word: 'वन', meaning: 'forest', pronunciation: 'van' },
+    { devanagari: 'श', roman: 'sha', type: 'consonant', word: 'शेर', meaning: 'lion', pronunciation: 'sher' },
+    { devanagari: 'ष', roman: 'sha', type: 'consonant', word: 'षट्', meaning: 'six', pronunciation: 'shat' },
+    { devanagari: 'स', roman: 'sa', type: 'consonant', word: 'सूरज', meaning: 'sun', pronunciation: 'suraj' },
+    { devanagari: 'ह', roman: 'ha', type: 'consonant', word: 'हाथी', meaning: 'elephant', pronunciation: 'haathi' }
 ];
 
 const hindiVocabulary = [
@@ -69,69 +70,312 @@ const basicPhrases = [
 let currentLetterIndex = 0;
 let currentVocabIndex = 0;
 let currentPhraseIndex = 0;
+let currentAlphabetMode = 'all'; // 'all', 'vowels', 'consonants'
+let alphabetQuizScore = 0;
+let alphabetQuizIndex = 0;
+let alphabetQuizQuestions = [];
 
 // Text-to-speech function
 function speakHindi(text) {
     if ('speechSynthesis' in window) {
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = 'hi-IN';
-        utterance.rate = 0.8;
+        utterance.rate = 0.7;
+        utterance.pitch = 1.1;
         speechSynthesis.speak(utterance);
     }
 }
 
-// Initialize Hindi letters display
-function initializeLetters() {
+// Initialize Hindi alphabet display
+function initializeAlphabet() {
     const lettersContainer = document.getElementById('letters');
     lettersContainer.innerHTML = `
-        <h3>🔤 Hindi Letters (Devanagari)</h3>
+        <h3>🔤 Hindi Alphabet (देवनागरी वर्णमाला)</h3>
+        <div style="text-align: center; margin: 20px 0;">
+            <button class="btn" onclick="setAlphabetMode('all')" style="margin: 5px;">All Letters</button>
+            <button class="btn" onclick="setAlphabetMode('vowels')" style="margin: 5px;">Vowels (स्वर)</button>
+            <button class="btn" onclick="setAlphabetMode('consonants')" style="margin: 5px;">Consonants (व्यंजन)</button>
+        </div>
         <div id="current-letter"></div>
         <div style="text-align: center; margin: 20px 0;">
             <button class="btn" onclick="previousLetter()">⬅️ Previous</button>
             <button class="btn" onclick="nextLetter()">Next ➡️</button>
+            <button class="btn" onclick="startAlphabetQuiz()">🧠 Alphabet Quiz</button>
         </div>
+        <div id="alphabet-grid" style="margin-top: 30px;"></div>
     `;
     showCurrentLetter();
+    showAlphabetGrid();
+}
+
+function setAlphabetMode(mode) {
+    currentAlphabetMode = mode;
+    currentLetterIndex = 0;
+    showCurrentLetter();
+    showAlphabetGrid();
+}
+
+function getFilteredAlphabet() {
+    switch(currentAlphabetMode) {
+        case 'vowels':
+            return hindiAlphabet.filter(letter => letter.type === 'vowel');
+        case 'consonants':
+            return hindiAlphabet.filter(letter => letter.type === 'consonant');
+        default:
+            return hindiAlphabet;
+    }
 }
 
 function showCurrentLetter() {
-    const letter = hindiLetters[currentLetterIndex];
+    const filteredAlphabet = getFilteredAlphabet();
+    const letter = filteredAlphabet[currentLetterIndex];
     const letterDiv = document.getElementById('current-letter');
+    
+    if (!letter) return;
     
     letterDiv.innerHTML = `
         <div class="letter-display fade-in">
-            <h3>${letter.devanagari}</h3>
-            <p style="font-size: 1.5em; margin: 10px 0;">
+            <h2 style="font-size: 4em; margin-bottom: 10px; color: white;">${letter.devanagari}</h2>
+            <p style="font-size: 1.8em; margin: 10px 0; color: #e1f5fe;">
                 Sounds like: "${letter.roman}"
             </p>
             <div style="margin: 20px 0;">
-                <p><strong>Example word:</strong></p>
-                <div style="font-size: 1.3em; margin: 15px 0;">
+                <p style="color: white; font-size: 1.2em;"><strong>Example word:</strong></p>
+                <div style="font-size: 1.5em; margin: 15px 0;">
                     <span class="hword" onclick="speakHindi('${letter.word}')">${letter.word}</span>
                     <br>
-                    <small style="color: white; opacity: 0.9;">
+                    <small style="color: #e1f5fe; opacity: 0.9;">
                         (${letter.pronunciation}) = ${letter.meaning}
                     </small>
                 </div>
             </div>
-            <button class="btn" onclick="speakHindi('${letter.devanagari}')" style="margin: 10px;">
-                🔊 Hear Letter
-            </button>
-            <button class="btn" onclick="speakHindi('${letter.word}')" style="margin: 10px;">
-                🔊 Hear Word
-            </button>
+            <div style="margin: 20px 0;">
+                <button class="btn" onclick="speakHindi('${letter.devanagari}')" style="margin: 5px;">
+                    🔊 Hear Letter
+                </button>
+                <button class="btn" onclick="speakHindi('${letter.word}')" style="margin: 5px;">
+                    🔊 Hear Word
+                </button>
+                <button class="btn" onclick="practiceWriting('${letter.devanagari}')" style="margin: 5px;">
+                    ✏️ Practice Writing
+                </button>
+            </div>
         </div>
     `;
 }
 
-function nextLetter() {
-    currentLetterIndex = (currentLetterIndex + 1) % hindiLetters.length;
+function showAlphabetGrid() {
+    const filteredAlphabet = getFilteredAlphabet();
+    const gridDiv = document.getElementById('alphabet-grid');
+    
+    let gridHTML = `
+        <h4 style="text-align: center; color: #4a4a4a; margin-bottom: 20px;">
+            ${currentAlphabetMode === 'vowels' ? 'Vowels (स्वर)' : 
+              currentAlphabetMode === 'consonants' ? 'Consonants (व्यंजन)' : 
+              'Complete Alphabet'} - Click any letter to hear it!
+        </h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 10px;">
+    `;
+    
+    filteredAlphabet.forEach((letter, index) => {
+        const isActive = index === currentLetterIndex ? 'background: #ff6b6b; transform: scale(1.1);' : '';
+        gridHTML += `
+            <div onclick="selectLetter(${index})" 
+                 style="background: linear-gradient(45deg, #4ecdc4, #44a08d); 
+                        color: white; padding: 15px; border-radius: 10px; 
+                        text-align: center; cursor: pointer; font-size: 1.5em; 
+                        font-weight: bold; transition: all 0.3s ease; ${isActive}"
+                 onmouseover="this.style.transform='scale(1.05)'"
+                 onmouseout="this.style.transform='scale(1)'">
+                ${letter.devanagari}
+            </div>
+        `;
+    });
+    
+    gridHTML += '</div>';
+    gridDiv.innerHTML = gridHTML;
+}
+
+function selectLetter(index) {
+    currentLetterIndex = index;
     showCurrentLetter();
+    showAlphabetGrid();
+    
+    const filteredAlphabet = getFilteredAlphabet();
+    speakHindi(filteredAlphabet[index].devanagari);
+}
+
+function nextLetter() {
+    const filteredAlphabet = getFilteredAlphabet();
+    currentLetterIndex = (currentLetterIndex + 1) % filteredAlphabet.length;
+    showCurrentLetter();
+    showAlphabetGrid();
 }
 
 function previousLetter() {
-    currentLetterIndex = currentLetterIndex === 0 ? hindiLetters.length - 1 : currentLetterIndex - 1;
+    const filteredAlphabet = getFilteredAlphabet();
+    currentLetterIndex = currentLetterIndex === 0 ? filteredAlphabet.length - 1 : currentLetterIndex - 1;
     showCurrentLetter();
+    showAlphabetGrid();
+}
+
+function practiceWriting(letter) {
+    const practiceDiv = document.createElement('div');
+    practiceDiv.innerHTML = `
+        <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                    background: rgba(0,0,0,0.8); z-index: 1000; display: flex; 
+                    align-items: center; justify-content: center;" onclick="closePractice()">
+            <div style="background: white; padding: 40px; border-radius: 20px; 
+                        text-align: center; max-width: 500px;" onclick="event.stopPropagation()">
+                <h3 style="color: #4a4a4a; margin-bottom: 20px;">Practice Writing: ${letter}</h3>
+                <div style="font-size: 8em; color: #ddd; margin: 20px 0; 
+                            border: 3px dashed #ccc; padding: 20px; border-radius: 10px;">
+                    ${letter}
+                </div>
+                <p style="color: #666; margin: 20px 0;">
+                    Trace over the letter above with your finger or a stylus!
+                </p>
+                <button class="btn" onclick="speakHindi('${letter}')" style="margin: 10px;">
+                    🔊 Hear Again
+                </button>
+                <button class="btn" onclick="closePractice()" style="margin: 10px;">
+                    ✅ Done
+                </button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(practiceDiv);
+}
+
+function closePractice() {
+    const practiceDiv = document.querySelector('div[style*="position: fixed"]');
+    if (practiceDiv) {
+        document.body.removeChild(practiceDiv);
+    }
+}
+
+// Alphabet Quiz
+function startAlphabetQuiz() {
+    alphabetQuizIndex = 0;
+    alphabetQuizScore = 0;
+    alphabetQuizQuestions = [];
+    
+    const filteredAlphabet = getFilteredAlphabet();
+    
+    // Generate 10 random questions
+    for (let i = 0; i < Math.min(10, filteredAlphabet.length); i++) {
+        const randomLetter = filteredAlphabet[Math.floor(Math.random() * filteredAlphabet.length)];
+        alphabetQuizQuestions.push(randomLetter);
+    }
+    
+    const letterDiv = document.getElementById('current-letter');
+    letterDiv.innerHTML = '<div class="fade-in">Starting Alphabet Quiz...</div>';
+    
+    setTimeout(showAlphabetQuizQuestion, 500);
+}
+
+function showAlphabetQuizQuestion() {
+    if (alphabetQuizIndex >= alphabetQuizQuestions.length) {
+        showAlphabetQuizResults();
+        return;
+    }
+    
+    const question = alphabetQuizQuestions[alphabetQuizIndex];
+    const filteredAlphabet = getFilteredAlphabet();
+    const letterDiv = document.getElementById('current-letter');
+    
+    // Create wrong options
+    const wrongOptions = filteredAlphabet
+        .filter(l => l.devanagari !== question.devanagari)
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3)
+        .map(l => l.roman);
+    
+    const allOptions = [question.roman, ...wrongOptions].sort(() => Math.random() - 0.5);
+    
+    letterDiv.innerHTML = `
+        <div class="quiz-container fade-in">
+            <h4 style="color: white;">What sound does this letter make?</h4>
+            <div style="margin: 20px 0;">
+                <div style="font-size: 4em; cursor: pointer; color: white;" onclick="speakHindi('${question.devanagari}')">
+                    ${question.devanagari}
+                </div>
+                <p style="color: #e1f5fe;">(Click to hear the letter)</p>
+            </div>
+            <div class="quiz-options">
+                ${allOptions.map(option => 
+                    `<button class="quiz-option" onclick="selectAlphabetAnswer('${option}', '${question.roman}')">
+                        ${option}
+                    </button>`
+                ).join('')}
+            </div>
+            <div id="alphabet-quiz-feedback"></div>
+            <p style="color: white; margin-top: 20px;">
+                Question ${alphabetQuizIndex + 1} of ${alphabetQuizQuestions.length}
+            </p>
+        </div>
+    `;
+}
+
+function selectAlphabetAnswer(selected, correct) {
+    const buttons = document.querySelectorAll('#current-letter .quiz-option');
+    const feedbackDiv = document.getElementById('alphabet-quiz-feedback');
+    
+    buttons.forEach(button => {
+        button.disabled = true;
+        if (button.textContent.trim() === correct) {
+            button.classList.add('correct');
+        } else if (button.textContent.trim() === selected && selected !== correct) {
+            button.classList.add('incorrect');
+        }
+    });
+    
+    if (selected === correct) {
+        alphabetQuizScore++;
+        feedbackDiv.innerHTML = `
+            <div style="color: #4caf50; font-size: 1.3em; font-weight: bold;" class="bounce">
+                ✅ बहुत अच्छा! (Bahut accha!) Excellent!
+            </div>
+        `;
+    } else {
+        feedbackDiv.innerHTML = `
+            <div style="color: #ffcdd2; font-size: 1.3em; font-weight: bold;">
+                ❌ Good try! The correct sound is "${correct}"
+            </div>
+        `;
+    }
+    
+    setTimeout(() => {
+        alphabetQuizIndex++;
+        showAlphabetQuizQuestion();
+    }, 2500);
+}
+
+function showAlphabetQuizResults() {
+    const percentage = Math.round((alphabetQuizScore / alphabetQuizQuestions.length) * 100);
+    let message = '';
+    
+    if (percentage >= 80) {
+        message = 'शानदार! (Shaandaar!) Outstanding! 🌟';
+    } else if (percentage >= 60) {
+        message = 'बहुत अच्छा! (Bahut accha!) Very good! 👏';
+    } else {
+        message = 'अभ्यास करते रहें! (Abhyas karte rahein!) Keep practicing! 💪';
+    }
+    
+    const letterDiv = document.getElementById('current-letter');
+    letterDiv.innerHTML = `
+        <div class="score-display fade-in">
+            <h3>Alphabet Quiz Complete!</h3>
+            <p>You got ${alphabetQuizScore} out of ${alphabetQuizQuestions.length} correct!</p>
+            <p>That's ${percentage}%</p>
+            <p>${message}</p>
+            <div style="margin-top: 20px;">
+                <button class="btn" onclick="startAlphabetQuiz()">Try Again</button>
+                <button class="btn" onclick="showCurrentLetter()">Back to Learning</button>
+            </div>
+        </div>
+    `;
 }
 
 // Initialize vocabulary section
@@ -406,7 +650,7 @@ function showAllPhrases() {
 
 // Initialize everything when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    initializeLetters();
+    initializeAlphabet();
     initializeVocabulary();
     initializePhrases();
     
@@ -416,20 +660,28 @@ document.addEventListener('DOMContentLoaded', function() {
         <h3>🎯 Hindi Learning Tips</h3>
         <div class="activity-grid">
             <div class="activity-card">
-                <h4>Listen Carefully</h4>
+                <h4>🔊 Listen Carefully</h4>
                 <p>Click the 🔊 buttons to hear correct pronunciation!</p>
             </div>
             <div class="activity-card">
-                <h4>Practice Daily</h4>
-                <p>Spend a few minutes each day learning new words!</p>
+                <h4>📝 Practice Writing</h4>
+                <p>Use the practice writing feature for each letter!</p>
             </div>
             <div class="activity-card">
-                <h4>Use Telugu Connection</h4>
+                <h4>🔄 Daily Practice</h4>
+                <p>Spend a few minutes each day learning new letters!</p>
+            </div>
+            <div class="activity-card">
+                <h4>🎯 Take Quizzes</h4>
+                <p>Test your knowledge with alphabet and vocabulary quizzes!</p>
+            </div>
+            <div class="activity-card">
+                <h4>🌟 Start Simple</h4>
+                <p>Begin with vowels, then move to consonants!</p>
+            </div>
+            <div class="activity-card">
+                <h4>🤝 Telugu Connection</h4>
                 <p>Many Hindi words are similar to Telugu words!</p>
-            </div>
-            <div class="activity-card">
-                <h4>Start Simple</h4>
-                <p>Begin with basic greetings and common words!</p>
             </div>
         </div>
     `;
